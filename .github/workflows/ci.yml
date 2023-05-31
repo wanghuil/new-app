@@ -19,7 +19,7 @@ jobs:
         node-version: 16
 
     - name: Build Docker image
-      run: docker build -t wli0807/new-app -f Dockerfile.dev .
+      run: docker build -t sample-app -f Dockerfile.dev .
 
     - name: Run tests
-      run: docker run -e CI=true wli0807/new-app npm run test -- --coverage --watchAll=false
+      run: docker run -e CI=true sample-app npm run test -- --coverage --watchAll=false
